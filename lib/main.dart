@@ -1,6 +1,7 @@
-import 'package:clean_todo_app/screens/splash_screen.dart';
+import 'package:clean_todo_app/app/todo_app.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const SplashScreen());
+  runApp(const ProviderScope(child: TodoApp()));
 }

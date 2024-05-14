@@ -10,5 +10,5 @@ final routesProvider = Provider<GoRouter>((ref) {
   return GoRouter(
       routes: appRoutes,
       navigatorKey: navigationKey,
-      initialLocation: RouteLocation.splashScreen);
+      initialLocation: RouteLocation.home);
 });

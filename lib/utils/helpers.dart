@@ -23,7 +23,10 @@ class Helpers {
   static void selectDate(BuildContext context, WidgetRef ref) async {
     final initialDate = ref.read(dateProvider);
     DateTime? pickedDate = await showDatePicker(
-        context: context, firstDate: DateTime(2023), lastDate: DateTime(2060));
+        initialDate: initialDate,
+        context: context,
+        firstDate: DateTime(2023),
+        lastDate: DateTime(2060));
     if (pickedDate != null) {
       ref.read(dateProvider.notifier).state = pickedDate;
     }
